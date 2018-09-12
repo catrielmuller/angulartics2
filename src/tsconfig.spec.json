@@ -1,0 +1,24 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../out-tsc/spec",
+    "baseUrl": "./",
+    "module": "commonjs",
+    "types": [
+      "jasmine",
+      "node",
+      "google.analytics",
+      "applicationinsights-js",
+      "segment-analytics",
+      "facebook-pixel"
+    ],
+    "paths": {
+      "angulartics2": ["./lib/core/public_api"]
+    }
+  },
+  "files": ["test.ts",  "polyfills.ts"],
+  "include": ["**/*.spec.ts", "**/*.d.ts"],
+  "angularCompilerOptions": {
+    "preserveWhitespaces": false
+  }
+}
